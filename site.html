@@ -1,250 +1,414 @@
 
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Neves Digital | Criação de Sites</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #123B72;
-       color: #FFFFFF;
-    }
-    header {
-      padding: 25px 8%;
-      background: #111c32;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h2 { color: #38bdf8; }
-    .hero {
-      text-align: center;
-      padding: 90px 20px;
-    }
-    .hero h1 {
-      font-size: 42px;
-      color: #38bdf8;
-    }
-    .hero p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
-    .btn {
-      display: inline-block;
-      background: #123B72;
-      color: white;
-      padding: 14px 25px;
-      border-radius: 8px;
-      text-decoration: none;
-      margin-top: 15px;
-    }
-    section {
-      padding: 45px 8%;
-      text-align: center;
-    }
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .service {
-      background: #17243b;
-      padding: 25px;
-      border-radius: 12px;
-      width: 260px;
-    }
-    footer {
-      background: #111c32;
-      text-align: center;
-      padding: 25px;
-      color: #cbd5e1;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Neves Digital - Criação de sites, lojas online, design gráfico e publicidade digital em Angola.">
+<title>Neves Digital | Soluções Digitais em Angola</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #080808;
+  color: #fff;
+  line-height: 1.6;
+}
+
+header {
+  background: #111;
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #b99745;
+}
+
+.logo {
+  color: #d4af37;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.logo span {
+  display: block;
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #d4af37;
+}
+
+.hero {
+  min-height: 480px;
+  padding: 100px 7%;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(120deg, #080808, #202020);
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 43px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.gold {
+  color: #d4af37;
+}
+
+.hero p {
+  color: #ccc;
+  margin-bottom: 28px;
+  font-size: 17px;
+}
+
+.btn {
+  display: inline-block;
+  background: #d4af37;
+  color: #080808;
+  padding: 13px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.btn:hover {
+  background: #f0d477;
+}
+
+section {
+  padding: 65px 7%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-title h2 {
+  color: #d4af37;
+  font-size: 30px;
+}
+
+.section-title p {
+  color: #aaa;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #151515;
+  border: 1px solid #333;
+  padding: 25px;
+  border-radius: 9px;
+  text-align: center;
+}
+
+.card h3 {
+  color: #d4af37;
+  margin: 12px 0;
+}
+
+.card p {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.symbol {
+  font-size: 35px;
+}
+
+.sectors {
+  background: #101010;
+}
+
+.price {
+  font-size: 23px;
+  color: #d4af37;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.contact {
+  background: #151515;
+  text-align: center;
+}
+
+.contact p {
+  margin: 10px 0 20px;
+  color: #ccc;
+}
+
+footer {
+  background: #050505;
+  text-align: center;
+  padding: 25px;
+  color: #aaa;
+  border-top: 1px solid #333;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 75px 7%;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  section {
+    padding: 50px 6%;
+  }
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <img src="2DC81A38-7473-48C6-B8F0-260C7CCBE874.png"
-       alt="Neves Digital"
-       style="width:160px;max-width:80%;height:auto;">
-  <span>Inovação Digital</span>
+  <div class="logo">
+    NEVES DIGITAL
+    <span>INOVAÇÃO DIGITAL</span>
+  </div>
+
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#setores">Soluções</a>
+    <a href="#precos">Preços</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 </header>
 
-<div class="hero">
-  <h1>O teu negócio merece estar na Internet!</h1>
-  <p>Criamos sites modernos e profissionais<br>
-  para empresas e pequenos negócios.</p>
-  <a href="https://wa.me/244940317644" class="btn" target="_blank">Fala connosco</a>
-</div>
+<main>
 
-<section>
-  <h2>Os nossos serviços</h2>
-  <div class="services">
-    <div class="service">
-      <p>Criamos sites modernos, profissionais e adaptados ao telemóvel para atrair mais clientes.</p>
-      <a href="https://wa.me/244940317644?text=Olá!%20Quero%20criar%20um%20site." class="btn" target="_blank">
-Pedir um site
-</a>
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <h1>O teu negócio merece uma <span class="gold">presença digital profissional.</span></h1>
+    <p>
+      Ajudamos empresas e empreendedores em Angola
+      a crescer através da tecnologia, criatividade
+      e soluções digitais.
+    </p>
+    <a class="btn" href="https://wa.me/244940317644">Fala connosco</a>
+    <a class="btn" href="#servicos">Conhece os serviços</a>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="section-title">
+    <h2>Os nossos serviços</h2>
+    <p>Soluções para transformar o teu negócio.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="symbol">🌐</div>
+      <h3>Criação de Sites</h3>
+      <p>Sites modernos, profissionais e adaptados a telemóveis.</p>
     </div>
-    <div class="service">
-      <p>Criamos logótipos, identidade visual e materiais publicitários para destacar a tua marca.</p>
-      <a href="https://wa.me/244940317644?text=Olá!%20Quero%20um%20serviço%20de%20design%20digital." class="btn" target="_blank">
-Pedir um design
-</a>
+
+    <div class="card">
+      <div class="symbol">🛒</div>
+      <h3>Lojas Online</h3>
+      <p>Apresenta os teus produtos e recebe pedidos de clientes.</p>
     </div>
-    <div class="service">
-      <p>Ajudamos a divulgar o teu negócio e a conquistar mais clientes através das plataformas digitais.</p>
-      <a href="https://wa.me/244940317644?text=Olá!%20Quero%20melhorar%20a%20presença%20online%20do%20meu%20negócio." class="btn" target="_blank">
-Quero divulgar o meu negócio
-</a>
+
+    <div class="card">
+      <div class="symbol">🎨</div>
+      <h3>Design Gráfico</h3>
+      <p>Logótipos, cartazes e identidade visual para a tua marca.</p>
+    </div>
+
+    <div class="card">
+      <div class="symbol">📱</div>
+      <h3>Redes Sociais</h3>
+      <p>Conteúdos e estratégias para fortalecer a tua presença online.</p>
+    </div>
+
+    <div class="card">
+      <div class="symbol">📢</div>
+      <h3>Publicidade Digital</h3>
+      <p>Divulgação de marcas, produtos e serviços na Internet.</p>
+    </div>
+
+    <div class="card">
+      <div class="symbol">💡</div>
+      <h3>Consultoria Digital</h3>
+      <p>Orientação para levar o teu negócio ao mundo digital.</p>
     </div>
   </div>
-</section> <section style="background:#080808;color:white;padding:45px 20px;text-align:center;">
-  <h2 style="color:#d4af37;">O Nosso Portefólio</h2>
-  <p>Conhece alguns exemplos do nosso trabalho.</p>
+</section>
 
-  <div class="services">
+<section class="sectors" id="setores">
+  <div class="section-title">
+    <h2>Soluções para vários sectores</h2>
+    <p>Ajudamos diferentes tipos de negócios em Angola.</p>
+  </div>
 
-    <div class="service">
-      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" style="width:100%;border-radius:12px;">
-      <h3>Criação de Sites</h3>
-      <p>Sites modernos e profissionais.</p>
+  <div class="grid">
+    <div class="card">
+      <div class="symbol">👕</div>
+      <h3>Lojas de Roupa</h3>
+      <p>Vitrines digitais para apresentar coleções e produtos.</p>
     </div>
 
-    <div class="service">
-      <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600" style="width:100%;border-radius:12px;">
-      <h3>Identidade Visual</h3>
-      <p>Design e apresentação de marcas.</p>
+    <div class="card">
+      <div class="symbol">🏠</div>
+      <h3>Imobiliárias</h3>
+      <p>Divulgação de casas, apartamentos e terrenos.</p>
     </div>
 
-    <div class="service">
-      <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600" style="width:100%;border-radius:12px;">
-      <h3>Redes Sociais</h3>
-      <p>Conteúdos criativos para empresas.</p>
+    <div class="card">
+      <div class="symbol">🚗</div>
+      <h3>Automóveis</h3>
+      <p>Apresentação e publicidade de viaturas.</p>
     </div>
 
+    <div class="card">
+      <div class="symbol">💄</div>
+      <h3>Cosméticos</h3>
+      <p>Catálogos digitais para produtos de beleza.</p>
+    </div>
+
+    <div class="card">
+      <div class="symbol">⚽</div>
+      <h3>Material Desportivo</h3>
+      <p>Divulgação de equipamentos e artigos desportivos.</p>
+    </div>
+
+    <div class="card">
+      <div class="symbol">🍽️</div>
+      <h3>Restaurantes</h3>
+      <p>Menus digitais e apresentação de serviços.</p>
+    </div>
   </div>
 </section>
 
 <section id="portfolio">
-<h2>O nosso Portfólio</h2>
-  <div style="text-align:center;margin:30px auto;">
-  <img src="2DC81A38-7473-48C6-B8F0-260C7CCBE874.png
-       alt="Portfólio demonstrativo da Neves Digital"
-       style="width:100%;max-width:900px;height:auto;border-radius:12px;">
-  <p style="color:#d4af37;">
-    Exemplos demonstrativos de trabalhos da Neves Digital.
-  </p>
-</div>
-<p>Conhece algumas das soluções digitais da Neves Digital.</p>
-
-<div>
-<h3>Criação de Sites</h3>
-<p>Sites modernos e profissionais para empresas e empreendedores.</p>
-</div>
-
-<div>
-<h3>Design de Logótipos</h3>
-<p>Identidades visuais criativas para destacar a tua marca.</p>
-</div>
-
-<div>
-<h3>Redes Sociais</h3>
-<p>Design e conteúdos para fortalecer a presença da tua marca online.</p>
-</div>
-</section>  <section style="background:#080808;color:white;padding:45px 20px;text-align:center;">
-
-<h2 style="color:#d4af37;">Porquê escolher a Neves Digital?</h2>
-
-<div class="services">
-
-<div class="service">
-<h3>Atendimento Personalizado</h3>
-<p>Criamos soluções adaptadas às necessidades do teu negócio.</p>
-</div>
-
-<div class="service">
-<h3>Design Moderno</h3>
-<p>Valorizamos a tua marca com criatividade e profissionalismo.</p>
-</div>
-
-<div class="service">
-<h3>Compromisso</h3>
-<p>Trabalhamos para oferecer soluções digitais de qualidade.</p>
-</div>
-
-<div class="service">
-<h3>Contacto Direto</h3>
-<p>Estamos disponíveis para conversar sobre o teu projeto.</p>
-<a href="https://wa.me/244940317644" class="btn" target="_blank">
-Falar connosco
-</a>
-</div>
-
-</div>
-</section>                          <section id="precos">
-  <h2>Os nossos preços</h2>
-  <p>Serviços profissionais para fazer crescer o teu negócio.</p>
-
-  <div>
-    <h3>Criação de Sites</h3>
-    <p>A partir de 50.000 Kz</p>
+  <div class="section-title">
+    <h2>O nosso portfólio</h2>
+    <p>Exemplos de soluções que podemos desenvolver.</p>
   </div>
 
-  <div>
-    <h3>Design Digital</h3>
-    <p>A partir de 5.000 Kz</p>
-  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="symbol">💻</div>
+      <h3>Sites Profissionais</h3>
+      <p>Apresentação digital de empresas e marcas.</p>
+    </div>
 
-  <div>
-    <h3>Presença Online</h3>
-    <p>A partir de 40.000 Kz/mês</p>
+    <div class="card">
+      <div class="symbol">🖌️</div>
+      <h3>Design de Logótipos</h3>
+      <p>Identidade visual para negócios e empreendedores.</p>
+    </div>
+
+    <div class="card">
+      <div class="symbol">📲</div>
+      <h3>Publicidade e Redes Sociais</h3>
+      <p>Materiais gráficos para promover produtos e serviços.</p>
+    </div>
   </div>
-</section>                            <section id="contacto">
-  <h2>Vamos trabalhar juntos?</h2>
-  <p>Entra em contacto com a Neves Digital.</p>
-  <p>Angola</p>
 </section>
+
+<section id="precos">
+  <div class="section-title">
+    <h2>Os nossos preços</h2>
+    <p>Serviços profissionais para fazer crescer o teu negócio.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Criação de Sites</h3>
+      <div class="price">50.000 Kz</div>
+      <p>Site profissional para a tua empresa.</p>
+      <a class="btn" href="https://wa.me/244940317644">Solicitar</a>
+    </div>
+
+    <div class="card">
+      <h3>Design Digital</h3>
+      <div class="price">5.000 Kz</div>
+      <p>Design gráfico para divulgar a tua marca.</p>
+      <a class="btn" href="https://wa.me/244940317644">Solicitar</a>
+    </div>
+
+    <div class="card">
+      <h3>Presença Online</h3>
+      <div class="price">40.000 Kz/mês</div>
+      <p>Acompanhamento e gestão da presença digital.</p>
+      <a class="btn" href="https://wa.me/244940317644">Solicitar</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="section-title">
+    <h2>Vamos trabalhar juntos?</h2>
+    <p>O próximo passo do teu negócio começa aqui.</p>
+  </div>
+
+  <p>Atendimento em Angola.</p>
+  <p>WhatsApp: +244 940 317 644</p>
+  <a class="btn" href="https://wa.me/244940317644">Contactar a Neves Digital</a>
+</section>
+
+<section>
+  <div class="section-title">
+    <h2>Publicidade e parcerias</h2>
+    <p>Queres divulgar a tua empresa, produto ou serviço?</p>
+    <a class="btn" href="https://wa.me/244940317644">Anunciar connosco</a>
+  </div>
+</section>
+
+</main>
 
 <footer>
   <p>© 2026 Neves Digital. Todos os direitos reservados.</p>
-  <p>Desenvolvido por Pedro Neves Júnior.</p>
+  <p>Inovação Digital | Angola</p>
 </footer>
- 
-<section style="background:#080808;color:white;padding:50px 20px;text-align:center;">
-  <h2 style="color:#d4af37;">O teu negócio merece crescer!</h2>
 
-  <p>Transformamos as tuas ideias em soluções digitais.</p>
-
-  <a href="https://wa.me/244940317644?text=Olá!%20Quero%20solicitar%20um%20orçamento."
-  class="btn" target="_blank"
-  style="background:#d4af37;color:#080808;padding:15px 25px;border-radius:8px;text-decoration:none;display:inline-block;">
-    SOLICITAR ORÇAMENTO
-  </a>
-</section> <section style="background:#080808;color:white;padding:50px 20px;text-align:center;">
-  <h2 style="color:#d4af37;">Publicidade e Parcerias</h2>
-
-  <p>
-    Divulgue a sua empresa, produtos ou serviços
-    através da plataforma Neves Digital.
-  </p>
-
-  <h3 style="color:#d4af37;">Anuncie connosco!</h3>
-
-  <p>
-    Temos espaço para publicidade de lojas,
-    empresas e empreendedores.
-  </p>
-
-  <a href="https://wa.me/244940317644?text=Olá!%20Quero%20anunciar%20a%20minha%20empresa%20no%20site%20da%20Neves%20Digital."
-     target="_blank"
-     style="background:#d4af37;color:#080808;padding:14px 24px;border-radius:8px;text-decoration:none;display:inline-block;font-weight:bold;">
-    QUERO ANUNCIAR
-  </a>
-</section>  </body>
+</body>
 </html>
